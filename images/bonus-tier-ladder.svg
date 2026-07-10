@@ -1,56 +1,146 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0d0221"/>
-      <stop offset="100%" style="stop-color:#150734"/>
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="50%" style="stop-color:#150734"/>
+      <stop offset="100%" style="stop-color:#0d0221"/>
     </linearGradient>
+    <linearGradient id="tier1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e94560"/>
+      <stop offset="100%" style="stop-color:#a83245"/>
+    </linearGradient>
+    <linearGradient id="tier2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35"/>
+      <stop offset="100%" style="stop-color:#cc5520"/>
+    </linearGradient>
+    <linearGradient id="tier3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffa500"/>
+      <stop offset="100%" style="stop-color:#cc8400"/>
+    </linearGradient>
+    <linearGradient id="tier4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#41b883"/>
+      <stop offset="100%" style="stop-color:#2d8f5e"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
-  <rect width="800" height="450" fill="url(#bg)" rx="12"/>
+  <rect width="900" height="600" fill="url(#bg)" rx="16"/>
   
-  <text x="400" y="35" font-family="monospace" font-size="16" font-weight="bold" fill="#e94560" text-anchor="middle">BONUS TIER LADDER</text>
-  <text x="400" y="55" font-family="monospace" font-size="11" fill="#8892b0" text-anchor="middle">Deposit amounts and corresponding bonuses for code 128979</text>
-  
-  <!-- Tier 1: $500 -->
-  <g transform="translate(60, 80)">
-    <rect x="0" y="40" width="660" height="50" fill="#16213e" rx="6"/>
-    <rect x="0" y="40" width="200" height="50" fill="#e94560" rx="6"/>
-    <text x="100" y="70" font-family="monospace" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">$500 Deposit</text>
-    <text x="400" y="70" font-family="monospace" font-size="14" fill="#41b883" text-anchor="middle">$100 Bonus</text>
-    <text x="590" y="70" font-family="monospace" font-size="11" fill="#8892b0" text-anchor="middle">12 min ⚡</text>
+  <g opacity="0.02">
+    <line x1="0" y1="0" x2="900" y2="600" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="600" x2="900" y2="0" stroke="#fff" stroke-width="0.5"/>
   </g>
-  
-  <!-- Tier 2: $1,000 -->
-  <g transform="translate(60, 140)">
-    <rect x="0" y="0" width="660" height="50" fill="#16213e" rx="6"/>
-    <rect x="0" y="0" width="200" height="50" fill="#e94560" rx="6"/>
-    <text x="100" y="30" font-family="monospace" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">$1,000 Deposit</text>
-    <text x="400" y="30" font-family="monospace" font-size="14" fill="#41b883" text-anchor="middle">$200 Bonus</text>
-    <text x="590" y="30" font-family="monospace" font-size="11" fill="#8892b0" text-anchor="middle">~20 min</text>
+
+  <text x="45" y="40" font-family="monospace" font-size="18" font-weight="bold" fill="#e94560" letter-spacing="3">BONUS TIER STRUCTURE</text>
+  <text x="45" y="62" font-family="monospace" font-size="12" fill="#8892b0">How the AvaTrade welcome bonus scales with deposit amount — code 128979</text>
+  <line x1="45" y1="72" x2="855" y2="72" stroke="#e94560" stroke-width="1" opacity="0.3"/>
+
+  <!-- Deposit scale axis -->
+  <g transform="translate(60, 100)">
+    <text x="0" y="15" font-family="monospace" font-size="10" fill="#8892b0">$0</text>
+    <line x1="0" y1="20" x2="780" y2="20" stroke="#302b63" stroke-width="2"/>
+    
+    <!-- Tick marks -->
+    <line x1="100" y1="15" x2="100" y2="25" stroke="#302b63" stroke-width="1"/>
+    <text x="100" y="40" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">$500</text>
+    
+    <line x1="250" y1="15" x2="250" y2="25" stroke="#302b63" stroke-width="1"/>
+    <text x="250" y="40" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">$1,000</text>
+    
+    <line x1="430" y1="15" x2="430" y2="25" stroke="#302b63" stroke-width="1"/>
+    <text x="430" y="40" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">$2,000 ⭐</text>
+    
+    <line x1="600" y1="15" x2="600" y2="25" stroke="#302b63" stroke-width="1"/>
+    <text x="600" y="40" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">$5,000</text>
+    
+    <text x="780" y="15" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="end">$14,000 max</text>
   </g>
-  
-  <!-- Tier 3: $2,000 (highlighted) -->
-  <g transform="translate(60, 200)">
-    <rect x="0" y="0" width="660" height="55" fill="#1a2e1a" rx="6" stroke="#41b883" stroke-width="2"/>
-    <rect x="0" y="0" width="250" height="55" fill="#41b883" rx="6"/>
-    <text x="125" y="32" font-family="monospace" font-size="14" font-weight="bold" fill="#000" text-anchor="middle">$2,000 Deposit ⭐</text>
-    <text x="420" y="32" font-family="monospace" font-size="16" font-weight="bold" fill="#41b883" text-anchor="middle">$400 Bonus</text>
-    <text x="590" y="32" font-family="monospace" font-size="11" fill="#8892b0" text-anchor="middle">42 min ✅</text>
-    <text x="400" y="48" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">Best value: 20% effective rate</text>
+
+  <!-- Bonus Bar Chart Area -->
+  <g transform="translate(60, 170)">
+    <!-- Y-axis labels -->
+    <text x="0" y="0" font-family="monospace" font-size="9" fill="#555" text-anchor="end">$800</text>
+    <line x1="5" y1="-5" x2="780" y2="-5" stroke="#1a1a3e" stroke-width="1" stroke-dasharray="3"/>
+    <text x="0" y="95" font-family="monospace" font-size="9" fill="#555" text-anchor="end">$400</text>
+    <line x1="5" y1="90" x2="780" y2="90" stroke="#1a1a3e" stroke-width="1" stroke-dasharray="3"/>
+    <text x="0" y="195" font-family="monospace" font-size="9" fill="#555" text-anchor="end">$0</text>
+    <line x1="5" y1="195" x2="780" y2="195" stroke="#302b63" stroke-width="1"/>
+
+    <!-- Bar 1: $500 -->
+    <g transform="translate(65, 0)">
+      <rect x="0" y="155" width="130" height="40" fill="url(#tier1)" rx="4" opacity="0.3"/>
+      <rect x="0" y="155" width="130" height="40" fill="url(#tier1)" rx="4"/>
+      <rect x="0" y="155" width="130" height="40" fill="none" stroke="#fff" stroke-width="0.5" rx="4" opacity="0.2"/>
+      <text x="65" y="180" font-family="monospace" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">$100</text>
+      <text x="65" y="215" font-family="monospace" font-size="11" fill="#e94560" text-anchor="middle">$500 deposit</text>
+      <text x="65" y="232" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">12 min ⚡</text>
+      <rect x="25" y="240" width="80" height="18" fill="#e94560" rx="9" opacity="0.15"/>
+      <text x="65" y="253" font-family="monospace" font-size="9" fill="#e94560" text-anchor="middle">20% rate</text>
+    </g>
+
+    <!-- Bar 2: $1,000 -->
+    <g transform="translate(215, 0)">
+      <rect x="0" y="115" width="130" height="80" fill="url(#tier2)" rx="4" opacity="0.3"/>
+      <rect x="0" y="115" width="130" height="80" fill="url(#tier2)" rx="4"/>
+      <rect x="0" y="115" width="130" height="80" fill="none" stroke="#fff" stroke-width="0.5" rx="4" opacity="0.2"/>
+      <text x="65" y="165" font-family="monospace" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">$200</text>
+      <text x="65" y="215" font-family="monospace" font-size="11" fill="#ff6b35" text-anchor="middle">$1,000 deposit</text>
+      <text x="65" y="232" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">~20 min</text>
+      <rect x="25" y="240" width="80" height="18" fill="#ff6b35" rx="9" opacity="0.15"/>
+      <text x="65" y="253" font-family="monospace" font-size="9" fill="#ff6b35" text-anchor="middle">20% rate</text>
+    </g>
+
+    <!-- Bar 3: $2,000 (BEST VALUE - highlighted) -->
+    <g transform="translate(395, 0)">
+      <rect x="0" y="35" width="130" height="160" fill="url(#tier3)" rx="4" opacity="0.15"/>
+      <rect x="0" y="35" width="130" height="160" fill="url(#tier3)" rx="4"/>
+      <rect x="0" y="35" width="130" height="160" fill="none" stroke="#ffa500" stroke-width="2" rx="4"/>
+      <rect x="-5" y="30" width="140" height="170" fill="none" stroke="#fff" stroke-width="0.5" rx="6" opacity="0.1"/>
+      
+      <!-- Star badge -->
+      <circle cx="115" cy="10" r="12" fill="#ffa500"/>
+      <text x="115" y="15" font-family="monospace" font-size="12" fill="#000" text-anchor="middle">★</text>
+      
+      <text x="65" y="100" font-family="monospace" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle" filter="url(#glow)">$400</text>
+      <text x="65" y="120" font-family="monospace" font-size="9" fill="#ffa500" text-anchor="middle">BEST VALUE</text>
+      <text x="65" y="215" font-family="monospace" font-size="11" font-weight="bold" fill="#ffa500" text-anchor="middle">$2,000 deposit</text>
+      <text x="65" y="232" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">42 min ✅</text>
+      <rect x="25" y="240" width="80" height="18" fill="#ffa500" rx="9" opacity="0.15"/>
+      <text x="65" y="253" font-family="monospace" font-size="9" fill="#ffa500" text-anchor="middle">20% rate</text>
+    </g>
+
+    <!-- Bar 4: $5,000 -->
+    <g transform="translate(575, 0)">
+      <rect x="0" y="0" width="130" height="195" fill="url(#tier4)" rx="4" opacity="0.3"/>
+      <rect x="0" y="0" width="130" height="195" fill="url(#tier4)" rx="4"/>
+      <rect x="0" y="0" width="130" height="195" fill="none" stroke="#fff" stroke-width="0.5" rx="4" opacity="0.2"/>
+      <text x="65" y="95" font-family="monospace" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">$750</text>
+      <text x="65" y="215" font-family="monospace" font-size="11" fill="#41b883" text-anchor="middle">$5,000 deposit</text>
+      <text x="65" y="232" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">~2 hrs ✅</text>
+      <rect x="25" y="240" width="80" height="18" fill="#41b883" rx="9" opacity="0.15"/>
+      <text x="65" y="253" font-family="monospace" font-size="9" fill="#41b883" text-anchor="middle">15% rate</text>
+    </g>
   </g>
-  
-  <!-- Tier 4: $5,000 -->
-  <g transform="translate(60, 265)">
-    <rect x="0" y="0" width="660" height="50" fill="#16213e" rx="6"/>
-    <rect x="0" y="0" width="200" height="50" fill="#e94560" rx="6"/>
-    <text x="100" y="30" font-family="monospace" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">$5,000 Deposit</text>
-    <text x="400" y="30" font-family="monospace" font-size="14" fill="#41b883" text-anchor="middle">$750 Bonus</text>
-    <text x="590" y="30" font-family="monospace" font-size="11" fill="#8892b0" text-anchor="middle">~2 hrs ✅</text>
-  </g>
-  
+
   <!-- Max bonus callout -->
-  <rect x="200" y="340" width="400" height="50" fill="#1a1a2e" rx="25" stroke="#e94560" stroke-width="2"/>
-  <text x="400" y="360" font-family="monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">🏆 MAX CUMULATIVE BONUS: $14,000</text>
-  <text x="400" y="378" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">All tiers confirmed with real deposits on a live account (June 2026)</text>
-  
-  <text x="400" y="430" font-family="monospace" font-size="10" fill="#555" text-anchor="middle">Code 128979 · AvaTrade Partner Code</text>
+  <g transform="translate(280, 460)">
+    <rect x="0" y="0" width="340" height="45" fill="#1a1a2e" rx="22" stroke="#e94560" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="170" y="28" font-family="monospace" font-size="14" font-weight="bold" fill="#e94560" text-anchor="middle">🏆 Max Cumulative Bonus: $14,000</text>
+  </g>
+
+  <!-- Key insight -->
+  <g transform="translate(30, 520)">
+    <rect x="0" y="0" width="845" height="40" fill="#1a1a2e" rx="8" opacity="0.6"/>
+    <text x="422" y="25" font-family="monospace" font-size="12" fill="#8892b0" text-anchor="middle">💡 Best value: Deposit $2,000 to get $400 bonus at 20% effective rate — the sweet spot for most traders</text>
+  </g>
+
+  <text x="450" y="585" font-family="monospace" font-size="10" fill="#555" text-anchor="middle">AvaTrade Partner Code 128979 · All tiers tested with real deposits · June 2026</text>
 </svg>

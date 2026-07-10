@@ -1,86 +1,161 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1a2e"/>
-      <stop offset="100%" style="stop-color:#16213e"/>
+      <stop offset="0%" style="stop-color:#0a0a1a"/>
+      <stop offset="50%" style="stop-color:#1a1a3e"/>
+      <stop offset="100%" style="stop-color:#0f0c29"/>
     </linearGradient>
+    <linearGradient id="mt4g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e94560"/>
+      <stop offset="100%" style="stop-color:#c73a51"/>
+    </linearGradient>
+    <linearGradient id="mt5g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b35"/>
+      <stop offset="100%" style="stop-color:#cc5520"/>
+    </linearGradient>
+    <linearGradient id="atg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#41b883"/>
+      <stop offset="100%" style="stop-color:#2d8f5e"/>
+    </linearGradient>
+    <linearGradient id="wtg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a90d9"/>
+      <stop offset="100%" style="stop-color:#3572b0"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
-  <rect width="800" height="450" fill="url(#bg)" rx="12"/>
-  
-  <text x="400" y="35" font-family="monospace" font-size="16" font-weight="bold" fill="#e94560" text-anchor="middle">PLATFORM COMPARISON</text>
-  <text x="400" y="55" font-family="monospace" font-size="11" fill="#8892b0" text-anchor="middle">AvaTrade supports 4 trading platforms</text>
-  
+  <rect width="900" height="600" fill="url(#bg)" rx="16"/>
+
+  <text x="45" y="40" font-family="monospace" font-size="18" font-weight="bold" fill="#e94560" letter-spacing="3">TRADING PLATFORM COMPARISON</text>
+  <text x="45" y="62" font-family="monospace" font-size="12" fill="#8892b0">AvaTrade offers 4 platforms — more choice than most brokers</text>
+  <line x1="45" y1="72" x2="855" y2="72" stroke="#e94560" stroke-width="1" opacity="0.3"/>
+
+  <!-- Platform Cards -->
   <!-- MT4 -->
-  <g transform="translate(30, 80)">
-    <rect x="0" y="0" width="170" height="300" fill="#16213e" rx="8"/>
-    <rect x="0" y="0" width="170" height="40" fill="#e94560" rx="8"/>
-    <rect x="0" y="20" width="170" height="20" fill="#e94560"/>
-    <text x="85" y="26" font-family="monospace" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">MT4</text>
+  <g transform="translate(20, 95)" filter="url(#shadow)">
+    <rect x="0" y="0" width="205" height="320" fill="#16213e" rx="12"/>
+    <rect x="0" y="0" width="205" height="55" fill="url(#mt4g)" rx="12"/>
+    <rect x="0" y="28" width="205" height="27" fill="url(#mt4g)"/>
+    <text x="102" y="25" font-family="monospace" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle" filter="url(#glow)">MT4</text>
+    <text x="102" y="45" font-family="monospace" font-size="10" fill="#fff" opacity="0.8" text-anchor="middle">MetaTrader 4</text>
     
-    <text x="85" y="65" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ Expert Advisors</text>
-    <text x="85" y="90" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ Custom Indicators</text>
-    <text x="85" y="115" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ 30+ Indicators</text>
-    <text x="85" y="140" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ Desktop + Mobile</text>
-    <text x="85" y="165" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">30 Timeframes</text>
-    <text x="85" y="190" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">9 Chart Types</text>
-    <text x="85" y="215" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">Best for:</text>
-    <text x="85" y="235" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">Algorithmic</text>
-    <text x="85" y="252" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">Traders</text>
+    <!-- Features list -->
+    <g transform="translate(12, 72)">
+      <text x="0" y="15" font-family="monospace" font-size="11" fill="#41b883">✓ Expert Advisors (EA)</text>
+      <text x="0" y="35" font-family="monospace" font-size="11" fill="#41b883">✓ Custom Indicators</text>
+      <text x="0" y="55" font-family="monospace" font-size="11" fill="#41b883">✓ 30+ Built-in Indicators</text>
+      <text x="0" y="75" font-family="monospace" font-size="11" fill="#41b883">✓ 9 Chart Types</text>
+      <text x="0" y="95" font-family="monospace" font-size="11" fill="#41b883">✓ 30 Timeframes</text>
+      <text x="0" y="115" font-family="monospace" font-size="11" fill="#41b883">✓ Desktop + Mobile + Web</text>
+      <text x="0" y="135" font-family="monospace" font-size="11" fill="#41b883">✓ MQL4 Programming</text>
+      
+      <line x1="0" y1="152" x2="180" y2="152" stroke="#1a1a3e" stroke-width="1"/>
+      <text x="90" y="170" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">Best for</text>
+      <rect x="35" y="178" width="110" height="22" fill="#e94560" rx="11" opacity="0.15"/>
+      <text x="90" y="193" font-family="monospace" font-size="10" fill="#e94560" text-anchor="middle">Algorithmic Traders</text>
+      
+      <text x="90" y="218" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">Rating</text>
+      <text x="90" y="238" font-family="monospace" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">4.5/5</text>
+    </g>
   </g>
-  
+
   <!-- MT5 -->
-  <g transform="translate(220, 80)">
-    <rect x="0" y="0" width="170" height="300" fill="#16213e" rx="8"/>
-    <rect x="0" y="0" width="170" height="40" fill="#e94560" rx="8"/>
-    <rect x="0" y="20" width="170" height="20" fill="#e94560"/>
-    <text x="85" y="26" font-family="monospace" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">MT5</text>
+  <g transform="translate(240, 95)" filter="url(#shadow)">
+    <rect x="0" y="0" width="205" height="320" fill="#16213e" rx="12"/>
+    <rect x="0" y="0" width="205" height="55" fill="url(#mt5g)" rx="12"/>
+    <rect x="0" y="28" width="205" height="27" fill="url(#mt5g)"/>
+    <text x="102" y="25" font-family="monospace" font-size="18" font-weight="bold" fill="#fff" text-anchor="middle" filter="url(#glow)">MT5</text>
+    <text x="102" y="45" font-family="monospace" font-size="10" fill="#fff" opacity="0.8" text-anchor="middle">MetaTrader 5</text>
     
-    <text x="85" y="65" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ More Timeframes</text>
-    <text x="85" y="90" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ Depth of Market</text>
-    <text x="85" y="115" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ More Instruments</text>
-    <text x="85" y="140" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ Advanced Tools</text>
-    <text x="85" y="165" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">21 Timeframes</text>
-    <text x="85" y="190" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">6 Order Types</text>
-    <text x="85" y="215" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">Best for:</text>
-    <text x="85" y="235" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">Advanced</text>
-    <text x="85" y="252" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">Traders</text>
+    <g transform="translate(12, 72)">
+      <text x="0" y="15" font-family="monospace" font-size="11" fill="#41b883">✓ 21 Timeframes (more)</text>
+      <text x="0" y="35" font-family="monospace" font-size="11" fill="#41b883">✓ Depth of Market</text>
+      <text x="0" y="55" font-family="monospace" font-size="11" fill="#41b883">✓ 6 Order Types</text>
+      <text x="0" y="75" font-family="monospace" font-size="11" fill="#41b883">✓ More Instruments</text>
+      <text x="0" y="95" font-family="monospace" font-size="11" fill="#41b883">✓ Economic Calendar</text>
+      <text x="0" y="115" font-family="monospace" font-size="11" fill="#41b883">✓ Built-in Swap Calculator</text>
+      <text x="0" y="135" font-family="monospace" font-size="11" fill="#41b883">✓ MQL5 Programming</text>
+      
+      <line x1="0" y1="152" x2="180" y2="152" stroke="#1a1a3e" stroke-width="1"/>
+      <text x="90" y="170" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">Best for</text>
+      <rect x="35" y="178" width="110" height="22" fill="#ff6b35" rx="11" opacity="0.15"/>
+      <text x="90" y="193" font-family="monospace" font-size="10" fill="#ff6b35" text-anchor="middle">Advanced Traders</text>
+      
+      <text x="90" y="218" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">Rating</text>
+      <text x="90" y="238" font-family="monospace" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">4.5/5</text>
+    </g>
   </g>
-  
+
   <!-- AvaTradeGO -->
-  <g transform="translate(410, 80)">
-    <rect x="0" y="0" width="170" height="300" fill="#16213e" rx="8"/>
-    <rect x="0" y="0" width="170" height="40" fill="#41b883" rx="8"/>
-    <rect x="0" y="20" width="170" height="20" fill="#41b883"/>
-    <text x="85" y="26" font-family="monospace" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">AvaTradeGO</text>
+  <g transform="translate(460, 95)" filter="url(#shadow)">
+    <rect x="0" y="0" width="205" height="320" fill="#16213e" rx="12"/>
+    <rect x="0" y="0" width="205" height="55" fill="url(#atg)" rx="12"/>
+    <rect x="0" y="28" width="205" height="27" fill="url(#atg)"/>
+    <text x="102" y="25" font-family="monospace" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle" filter="url(#glow)">AvaTradeGO</text>
+    <text x="102" y="45" font-family="monospace" font-size="10" fill="#fff" opacity="0.8" text-anchor="middle">Mobile App</text>
     
-    <text x="85" y="65" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ Mobile Native</text>
-    <text x="85" y="90" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ Copy Trading</text>
-    <text x="85" y="115" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ Push Notifications</text>
-    <text x="85" y="140" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ User Friendly</text>
-    <text x="85" y="165" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">Clean UI</text>
-    <text x="85" y="190" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">One-Click Trading</text>
-    <text x="85" y="215" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">Best for:</text>
-    <text x="85" y="235" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">Mobile</text>
-    <text x="85" y="252" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">Traders</text>
+    <g transform="translate(12, 72)">
+      <text x="0" y="15" font-family="monospace" font-size="11" fill="#41b883">✓ Mobile Native</text>
+      <text x="0" y="35" font-family="monospace" font-size="11" fill="#41b883">✓ Copy Trading</text>
+      <text x="0" y="55" font-family="monospace" font-size="11" fill="#41b883">✓ Push Notifications</text>
+      <text x="0" y="75" font-family="monospace" font-size="11" fill="#41b883">✓ Clean, Modern UI</text>
+      <text x="0" y="95" font-family="monospace" font-size="11" fill="#41b883">✓ One-Click Trading</text>
+      <text x="0" y="115" font-family="monospace" font-size="11" fill="#41b883">✓ Touch ID / Face ID</text>
+      <text x="0" y="135" font-family="monospace" font-size="11" fill="#41b883">✓ Real-time Alerts</text>
+      
+      <line x1="0" y1="152" x2="180" y2="152" stroke="#1a1a3e" stroke-width="1"/>
+      <text x="90" y="170" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">Best for</text>
+      <rect x="35" y="178" width="110" height="22" fill="#41b883" rx="11" opacity="0.15"/>
+      <text x="90" y="193" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">Mobile Traders</text>
+      
+      <text x="90" y="218" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">Rating</text>
+      <text x="90" y="238" font-family="monospace" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">4.0/5</text>
+    </g>
   </g>
-  
+
   <!-- WebTrader -->
-  <g transform="translate(600, 80)">
-    <rect x="0" y="0" width="170" height="300" fill="#16213e" rx="8"/>
-    <rect x="0" y="0" width="170" height="40" fill="#e94560" rx="8"/>
-    <rect x="0" y="20" width="170" height="20" fill="#e94560"/>
-    <text x="85" y="26" font-family="monospace" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">WebTrader</text>
+  <g transform="translate(680, 95)" filter="url(#shadow)">
+    <rect x="0" y="0" width="200" height="320" fill="#16213e" rx="12"/>
+    <rect x="0" y="0" width="200" height="55" fill="url(#wtg)" rx="12"/>
+    <rect x="0" y="28" width="200" height="27" fill="url(#wtg)"/>
+    <text x="100" y="25" font-family="monospace" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle" filter="url(#glow)">WebTrader</text>
+    <text x="100" y="45" font-family="monospace" font-size="10" fill="#fff" opacity="0.8" text-anchor="middle">Browser Platform</text>
     
-    <text x="85" y="65" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ No Download</text>
-    <text x="85" y="90" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ Any Browser</text>
-    <text x="85" y="115" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ Clean Interface</text>
-    <text x="85" y="140" font-family="monospace" font-size="10" fill="#41b883" text-anchor="middle">✅ Quick Access</text>
-    <text x="85" y="165" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">Built-in Analysis</text>
-    <text x="85" y="190" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">Charting Tools</text>
-    <text x="85" y="215" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">Best for:</text>
-    <text x="85" y="235" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">Quick</text>
-    <text x="85" y="252" font-family="monospace" font-size="10" fill="#8892b0" text-anchor="middle">Access</text>
+    <g transform="translate(10, 72)">
+      <text x="0" y="15" font-family="monospace" font-size="11" fill="#41b883">✓ No Download</text>
+      <text x="0" y="35" font-family="monospace" font-size="11" fill="#41b883">✓ Any Browser</text>
+      <text x="0" y="55" font-family="monospace" font-size="11" fill="#41b883">✓ Clean Interface</text>
+      <text x="0" y="75" font-family="monospace" font-size="11" fill="#41b883">✓ Quick Access</text>
+      <text x="0" y="95" font-family="monospace" font-size="11" fill="#41b883">✓ Charting Tools</text>
+      <text x="0" y="115" font-family="monospace" font-size="11" fill="#41b883">✓ Built-in Analysis</text>
+      <text x="0" y="135" font-family="monospace" font-size="11" fill="#41b883">✓ Cross-Platform</text>
+      
+      <line x1="0" y1="152" x2="180" y2="152" stroke="#1a1a3e" stroke-width="1"/>
+      <text x="90" y="170" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">Best for</text>
+      <rect x="35" y="178" width="110" height="22" fill="#4a90d9" rx="11" opacity="0.15"/>
+      <text x="90" y="193" font-family="monospace" font-size="10" fill="#4a90d9" text-anchor="middle">Quick Access</text>
+      
+      <text x="90" y="218" font-family="monospace" font-size="9" fill="#555" text-anchor="middle">Rating</text>
+      <text x="90" y="238" font-family="monospace" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">4.0/5</text>
+    </g>
   </g>
-  
-  <text x="400" y="430" font-family="monospace" font-size="10" fill="#555" text-anchor="middle">AvaTrade offers more platform choices than most brokers · All platforms available with code 128979</text>
+
+  <!-- Bottom summary -->
+  <g transform="translate(20, 435)">
+    <rect x="0" y="0" width="860" height="75" fill="#1a1a2e" rx="10" opacity="0.6"/>
+    
+    <text x="430" y="22" font-family="monospace" font-size="13" font-weight="bold" fill="#e94560" text-anchor="middle">More platform choice than most brokers</text>
+    <text x="430" y="42" font-family="monospace" font-size="11" fill="#8892b0" text-anchor="middle">AvaTrade offers MT4, MT5, AvaTradeGO, and WebTrader — all accessible with the same account and code 128979</text>
+    <text x="430" y="60" font-family="monospace" font-size="10" fill="#555" text-anchor="middle">1,250+ instruments available across all platforms · FCA, ASIC, CySEC regulated</text>
+  </g>
+
+  <text x="450" y="580" font-family="monospace" font-size="10" fill="#555" text-anchor="middle">AvaTrade Review · Full broker guide: tradetheday.com/brokers/avatrade</text>
 </svg>
